@@ -1,8 +1,10 @@
 package main
 
 import (
-	"github.com/vivek-729/autoGeneratePattern/code"
 	"fmt"
+
+	"github.com/vivek-729/autoGeneratePattern/code"
+	"github.com/vivek-729/autoGeneratePattern/serial"
 )
 
 // type stack struct {
@@ -31,6 +33,7 @@ import (
 
 func main() {
 	code.AutoGenerate()
+	serial.Init()
 	// infix to postfix dummy coDe
 	// s := "((A+B)-C*(D/E))+F"
 	fmt.Println("Hello! world")
