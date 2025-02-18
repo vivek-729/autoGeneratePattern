@@ -10,7 +10,7 @@ var wg sync.WaitGroup
 
 func api(i int) bool {
 	// 10 ms call
-	time.Sleep(10 * time.Millisecond)
+	time.Sleep(1 * time.Millisecond)
 	if i%100 == 0 {
 		fmt.Println(i)
 	}
@@ -24,8 +24,9 @@ func Init() {
 		wg.Add(1)
 		go api(i)
 	}
-	t1 := time.Now()
 	wg.Wait()
+	t1 := time.Now()
+
 
 	fmt.Printf("Concurrent call took %v to run.\n", t1.Sub(t0))
 
