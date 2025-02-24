@@ -41,7 +41,7 @@ func AutoGenerate() {
 	// fmt.Printf("%+v\n", variable.L)
 	// spew.Dump(variable.O)
 
-	operator := []string{"-", "+", "*", "/", "(-)", "<=", "and", ">=", "<", ">"}
+	operator := []string{"-", "+", "*", "/", "(-)", "<=", "and", ">=", "<", ">", "or"}
 	precedence := make(map[string]float32)
 	setPrecedence(precedence)
 
