@@ -6,22 +6,30 @@
         "operator": "*",
         "rhs": {
             "lhs": {
-                "instrument": "open"
+                "instrument": "open",
+                "value": 0
             },
             "operator": "(-)",
             "rhs": {
-                "instrument": "close"
-            }
-        }
+                "instrument": "close",
+                "value": 0
+            },
+            "value": 0
+        },
+        "value": 0
     },
     "operator": "\u003c=",
     "rhs": {
         "lhs": {
-            "instrument": "high"
+            "instrument": "high",
+            "value": 0
         },
         "operator": "-",
         "rhs": {
-            "instrument": "low"
-        }
-    }
+            "instrument": "low",
+            "value": 0
+        },
+        "value": 0
+    },
+    "value": 0
 }

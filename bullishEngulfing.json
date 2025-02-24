@@ -7,15 +7,18 @@
                         "instrument": "open",
                         "params": {
                             "offset": 1
-                        }
+                        },
+                        "value": 0
                     },
                     "operator": "\u003e",
                     "rhs": {
                         "instrument": "close",
                         "params": {
                             "offset": 1
-                        }
-                    }
+                        },
+                        "value": 0
+                    },
+                    "value": 0
                 },
                 "operator": "and",
                 "rhs": {
@@ -26,13 +29,17 @@
                         "operator": "*",
                         "rhs": {
                             "lhs": {
-                                "instrument": "close"
+                                "instrument": "close",
+                                "value": 0
                             },
                             "operator": "-",
                             "rhs": {
-                                "instrument": "open"
-                            }
-                        }
+                                "instrument": "open",
+                                "value": 0
+                            },
+                            "value": 0
+                        },
+                        "value": 0
                     },
                     "operator": "\u003e=",
                     "rhs": {
@@ -42,29 +49,39 @@
                         "operator": "*",
                         "rhs": {
                             "lhs": {
-                                "instrument": "high"
+                                "instrument": "high",
+                                "value": 0
                             },
                             "operator": "-",
                             "rhs": {
-                                "instrument": "low"
-                            }
-                        }
-                    }
-                }
+                                "instrument": "low",
+                                "value": 0
+                            },
+                            "value": 0
+                        },
+                        "value": 0
+                    },
+                    "value": 0
+                },
+                "value": 0
             },
             "operator": "and",
             "rhs": {
                 "lhs": {
-                    "instrument": "close"
+                    "instrument": "close",
+                    "value": 0
                 },
                 "operator": "\u003e",
                 "rhs": {
                     "instrument": "open",
                     "params": {
                         "offset": 1
-                    }
-                }
-            }
+                    },
+                    "value": 0
+                },
+                "value": 0
+            },
+            "value": 0
         },
         "operator": "and",
         "rhs": {
@@ -72,13 +89,17 @@
                 "instrument": "close",
                 "params": {
                     "offset": 1
-                }
+                },
+                "value": 0
             },
             "operator": "\u003e",
             "rhs": {
-                "instrument": "open"
-            }
-        }
+                "instrument": "open",
+                "value": 0
+            },
+            "value": 0
+        },
+        "value": 0
     },
     "operator": "and",
     "rhs": {
@@ -89,13 +110,17 @@
             "operator": "*",
             "rhs": {
                 "lhs": {
-                    "instrument": "high"
+                    "instrument": "high",
+                    "value": 0
                 },
                 "operator": "-",
                 "rhs": {
-                    "instrument": "low"
-                }
-            }
+                    "instrument": "low",
+                    "value": 0
+                },
+                "value": 0
+            },
+            "value": 0
         },
         "operator": "\u003e=",
         "rhs": {
@@ -110,7 +135,8 @@
                         "length": 10,
                         "smoothingLength": 1,
                         "source": "high"
-                    }
+                    },
+                    "value": 0
                 },
                 "operator": "-",
                 "rhs": {
@@ -119,9 +145,14 @@
                         "length": 10,
                         "smoothingLength": 1,
                         "source": "low"
-                    }
-                }
-            }
-        }
-    }
+                    },
+                    "value": 0
+                },
+                "value": 0
+            },
+            "value": 0
+        },
+        "value": 0
+    },
+    "value": 0
 }

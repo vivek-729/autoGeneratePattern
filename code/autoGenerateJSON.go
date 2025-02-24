@@ -54,6 +54,16 @@ func AutoGenerate() {
 	postfixBullishEngulfing := generatePostfix(bullishEngulfingFormula, operator, precedence)
 	bullishEngulfingObjectTree := generateObjectTree(postfixBullishEngulfing)
 	generateJSONFromObject(bullishEngulfingObjectTree, "bullishEngulfing.json")
+
+	smaListFormula := node.SmaList
+	postfixSmaList := generatePostfix(smaListFormula, operator, precedence)
+	smaListObjectTree := generateObjectTree(postfixSmaList)
+	generateJSONFromObject(smaListObjectTree, "smaList.json")
+
+	emaListFormula := node.EmaList
+	postfixEmaList := generatePostfix(emaListFormula, operator, precedence)
+	emaListObjectTree := generateObjectTree(postfixEmaList)
+	generateJSONFromObject(emaListObjectTree, "emaList.json")
 }
 
 func setPrecedence(precedence map[string]float32) {

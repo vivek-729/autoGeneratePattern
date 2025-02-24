@@ -1,14 +1,14 @@
 package node
 
 type Node struct {
-	Lhs            *Node          `json:"lhs,omitempty"`
-	Operator       string         `json:"operator,omitempty"`
-	Rhs            *Node          `json:"rhs,omitempty"`
+	Lhs            *Node          `json:"lhs,omitempty"` // assuming no null leaf nodes needed
+	Operator       string         `json:"operator,omitempty"`	// assuming no null leaf nodes needed
+	Rhs            *Node          `json:"rhs,omitempty"`	// assuming no null leaf nodes needed
 	TokenIndex     int64          `json:"tokenIndex,omitempty"`
 	Instrument     string         `json:"instrument,omitempty"`
 	TimeFrame      string         `json:"timeFrame,omitempty"`
 	Params         map[string]any `json:"params,omitempty"`
-	Value          float64        `json:"value,omitempty"`
+	Value          float64        `json:"value"`	// rhs value >= 0 needed, omitempty can'be use else value 0 gets removed
 	ValueString    string         `json:"valueString,omitempty"`
 	ValueTimestamp string         `json:"valueTimestamp,omitempty"`
 }
@@ -36,8 +36,8 @@ func NV(num float64) Node {
 	return node
 }
 
-// average instrument creator
-func AvgOHLC(instrumentName string, OHLCSource string, length int, smoothingLength int) Node {
+// Average OHLC instrument node creator
+func AVG(instrumentName string, OHLCSource string, length int, smoothingLength int) Node {
 	if !(instrumentName == "ma" || instrumentName == "ema" || instrumentName == "rma" || instrumentName == "sma") {
 		panic("Invalid average string.")
 	}
@@ -74,5 +74,28 @@ var BullishEngulfing = []any{"(", OHLC("open", 1), ">", OHLC("close", 1), ")", "
 	"(", NV(10), "*", "(", OHLC("close", 0), "-", OHLC("open", 0), ")", ">=", NV(7), "*", "(", OHLC("high", 0), "-", OHLC("low", 0), ")", ")", "and",
 	"(", OHLC("close", 0), ">", OHLC("open", 1), ")", "and",
 	"(", OHLC("close", 1), ">", OHLC("open", 0), ")", "and",
-	"(", NV(10), "*", "(", OHLC("high", 0), "-", OHLC("low", 0), ")", ">=", NV(12), "*", "(", AvgOHLC("ma", "high", 10, 1), "-", AvgOHLC("ma", "low", 10, 1), ")", ")",
+	"(", NV(10), "*", "(", OHLC("high", 0), "-", OHLC("low", 0), ")", ">=", NV(12), "*", "(", AVG("ma", "high", 10, 1), "-", AVG("ma", "low", 10, 1), ")", ")",
+}
+
+
+var SmaList = []any{
+	"(", AVG("ma", "close", 5, 0), ">=", NV(0), ")", "or",
+	"(", AVG("ma", "close", 10, 0), ">=", NV(0), ")", "or",
+	"(", AVG("ma", "close", 20, 0), ">=", NV(0), ")", "or",
+	"(", AVG("ma", "close", 30, 0), ">=", NV(0), ")", "or",
+	"(", AVG("ma", "close", 50, 0), ">=", NV(0), ")", "or",
+	"(", AVG("ma", "close", 100, 0), ">=", NV(0), ")", "or",
+	"(", AVG("ma", "close", 150, 0), ">=", NV(0), ")", "or",
+	"(", AVG("ma", "close", 200, 0), ">=", NV(0), ")",
+}
+
+var EmaList = []any{
+	"(", AVG("ema", "close", 5, 0), ">=", NV(0), ")", "or",
+	"(", AVG("ema", "close", 10, 0), ">=", NV(0), ")", "or",
+	"(", AVG("ema", "close", 20, 0), ">=", NV(0), ")", "or",
+	"(", AVG("ema", "close", 30, 0), ">=", NV(0), ")", "or",
+	"(", AVG("ema", "close", 50, 0), ">=", NV(0), ")", "or",
+	"(", AVG("ema", "close", 100, 0), ">=", NV(0), ")", "or",
+	"(", AVG("ema", "close", 150, 0), ">=", NV(0), ")", "or",
+	"(", AVG("ema", "close", 200, 0), ">=", NV(0), ")",
 }

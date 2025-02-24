@@ -1,0 +1,148 @@
+{
+    "lhs": {
+        "lhs": {
+            "lhs": {
+                "lhs": {
+                    "lhs": {
+                        "lhs": {
+                            "lhs": {
+                                "lhs": {
+                                    "instrument": "ema",
+                                    "params": {
+                                        "length": 5,
+                                        "source": "close"
+                                    },
+                                    "value": 0
+                                },
+                                "operator": "\u003e=",
+                                "rhs": {
+                                    "value": 0
+                                },
+                                "value": 0
+                            },
+                            "operator": "or",
+                            "rhs": {
+                                "lhs": {
+                                    "instrument": "ema",
+                                    "params": {
+                                        "length": 10,
+                                        "source": "close"
+                                    },
+                                    "value": 0
+                                },
+                                "operator": "\u003e=",
+                                "rhs": {
+                                    "value": 0
+                                },
+                                "value": 0
+                            },
+                            "value": 0
+                        },
+                        "operator": "or",
+                        "rhs": {
+                            "lhs": {
+                                "instrument": "ema",
+                                "params": {
+                                    "length": 20,
+                                    "source": "close"
+                                },
+                                "value": 0
+                            },
+                            "operator": "\u003e=",
+                            "rhs": {
+                                "value": 0
+                            },
+                            "value": 0
+                        },
+                        "value": 0
+                    },
+                    "operator": "or",
+                    "rhs": {
+                        "lhs": {
+                            "instrument": "ema",
+                            "params": {
+                                "length": 30,
+                                "source": "close"
+                            },
+                            "value": 0
+                        },
+                        "operator": "\u003e=",
+                        "rhs": {
+                            "value": 0
+                        },
+                        "value": 0
+                    },
+                    "value": 0
+                },
+                "operator": "or",
+                "rhs": {
+                    "lhs": {
+                        "instrument": "ema",
+                        "params": {
+                            "length": 50,
+                            "source": "close"
+                        },
+                        "value": 0
+                    },
+                    "operator": "\u003e=",
+                    "rhs": {
+                        "value": 0
+                    },
+                    "value": 0
+                },
+                "value": 0
+            },
+            "operator": "or",
+            "rhs": {
+                "lhs": {
+                    "instrument": "ema",
+                    "params": {
+                        "length": 100,
+                        "source": "close"
+                    },
+                    "value": 0
+                },
+                "operator": "\u003e=",
+                "rhs": {
+                    "value": 0
+                },
+                "value": 0
+            },
+            "value": 0
+        },
+        "operator": "or",
+        "rhs": {
+            "lhs": {
+                "instrument": "ema",
+                "params": {
+                    "length": 150,
+                    "source": "close"
+                },
+                "value": 0
+            },
+            "operator": "\u003e=",
+            "rhs": {
+                "value": 0
+            },
+            "value": 0
+        },
+        "value": 0
+    },
+    "operator": "or",
+    "rhs": {
+        "lhs": {
+            "instrument": "ema",
+            "params": {
+                "length": 200,
+                "source": "close"
+            },
+            "value": 0
+        },
+        "operator": "\u003e=",
+        "rhs": {
+            "value": 0
+        },
+        "value": 0
+    },
+    "value": 0
+}
