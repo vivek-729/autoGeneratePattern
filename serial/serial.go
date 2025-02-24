@@ -8,12 +8,9 @@ import (
 
 var wg sync.WaitGroup
 
-func api(i int) bool {
+func api() bool {
 	// 10 ms call
 	time.Sleep(1 * time.Millisecond)
-	if i%100 == 0 {
-		fmt.Println(i)
-	}
 	defer wg.Done()
 	return true
 }
@@ -22,7 +19,7 @@ func Init() {
 	t0 := time.Now()
 	for i := 0; i < 1000; i++ {
 		wg.Add(1)
-		go api(i)
+		go api()
 	}
 	wg.Wait()
 	t1 := time.Now()
@@ -33,7 +30,7 @@ func Init() {
 	t3 := time.Now()
 	for i := 0; i < 1000; i++ {
 		wg.Add(1)
-		api(i)
+		api()
 	}
 	t4 := time.Now()
 	fmt.Printf("Serial call took %v to run.\n", t4.Sub(t3))
