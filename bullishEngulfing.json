@@ -4,399 +4,124 @@
             "lhs": {
                 "lhs": {
                     "lhs": {
-                        "lhs": null,
-                        "operator": "",
-                        "rhs": null,
-                        "tokenIndex": 0,
                         "instrument": "open",
-                        "timeFrame": "",
                         "params": {
                             "offset": 1
-                        },
-                        "value": 0,
-                        "valueString": "",
-                        "valueTimestamp": ""
+                        }
                     },
                     "operator": "\u003e",
                     "rhs": {
-                        "lhs": null,
-                        "operator": "",
-                        "rhs": null,
-                        "tokenIndex": 0,
                         "instrument": "close",
-                        "timeFrame": "",
                         "params": {
                             "offset": 1
-                        },
-                        "value": 0,
-                        "valueString": "",
-                        "valueTimestamp": ""
-                    },
-                    "tokenIndex": 0,
-                    "instrument": "",
-                    "timeFrame": "",
-                    "params": null,
-                    "value": 0,
-                    "valueString": "",
-                    "valueTimestamp": ""
+                        }
+                    }
                 },
                 "operator": "and",
                 "rhs": {
                     "lhs": {
                         "lhs": {
-                            "lhs": null,
-                            "operator": "",
-                            "rhs": null,
-                            "tokenIndex": 0,
-                            "instrument": "",
-                            "timeFrame": "",
-                            "params": null,
-                            "value": 10,
-                            "valueString": "",
-                            "valueTimestamp": ""
+                            "value": 10
                         },
                         "operator": "*",
                         "rhs": {
                             "lhs": {
-                                "lhs": null,
-                                "operator": "",
-                                "rhs": null,
-                                "tokenIndex": 0,
-                                "instrument": "close",
-                                "timeFrame": "",
-                                "params": null,
-                                "value": 0,
-                                "valueString": "",
-                                "valueTimestamp": ""
+                                "instrument": "close"
                             },
                             "operator": "-",
                             "rhs": {
-                                "lhs": null,
-                                "operator": "",
-                                "rhs": null,
-                                "tokenIndex": 0,
-                                "instrument": "open",
-                                "timeFrame": "",
-                                "params": null,
-                                "value": 0,
-                                "valueString": "",
-                                "valueTimestamp": ""
-                            },
-                            "tokenIndex": 0,
-                            "instrument": "",
-                            "timeFrame": "",
-                            "params": null,
-                            "value": 0,
-                            "valueString": "",
-                            "valueTimestamp": ""
-                        },
-                        "tokenIndex": 0,
-                        "instrument": "",
-                        "timeFrame": "",
-                        "params": null,
-                        "value": 0,
-                        "valueString": "",
-                        "valueTimestamp": ""
+                                "instrument": "open"
+                            }
+                        }
                     },
                     "operator": "\u003e=",
                     "rhs": {
                         "lhs": {
-                            "lhs": null,
-                            "operator": "",
-                            "rhs": null,
-                            "tokenIndex": 0,
-                            "instrument": "",
-                            "timeFrame": "",
-                            "params": null,
-                            "value": 7,
-                            "valueString": "",
-                            "valueTimestamp": ""
+                            "value": 7
                         },
                         "operator": "*",
                         "rhs": {
                             "lhs": {
-                                "lhs": null,
-                                "operator": "",
-                                "rhs": null,
-                                "tokenIndex": 0,
-                                "instrument": "high",
-                                "timeFrame": "",
-                                "params": null,
-                                "value": 0,
-                                "valueString": "",
-                                "valueTimestamp": ""
+                                "instrument": "high"
                             },
                             "operator": "-",
                             "rhs": {
-                                "lhs": null,
-                                "operator": "",
-                                "rhs": null,
-                                "tokenIndex": 0,
-                                "instrument": "low",
-                                "timeFrame": "",
-                                "params": null,
-                                "value": 0,
-                                "valueString": "",
-                                "valueTimestamp": ""
-                            },
-                            "tokenIndex": 0,
-                            "instrument": "",
-                            "timeFrame": "",
-                            "params": null,
-                            "value": 0,
-                            "valueString": "",
-                            "valueTimestamp": ""
-                        },
-                        "tokenIndex": 0,
-                        "instrument": "",
-                        "timeFrame": "",
-                        "params": null,
-                        "value": 0,
-                        "valueString": "",
-                        "valueTimestamp": ""
-                    },
-                    "tokenIndex": 0,
-                    "instrument": "",
-                    "timeFrame": "",
-                    "params": null,
-                    "value": 0,
-                    "valueString": "",
-                    "valueTimestamp": ""
-                },
-                "tokenIndex": 0,
-                "instrument": "",
-                "timeFrame": "",
-                "params": null,
-                "value": 0,
-                "valueString": "",
-                "valueTimestamp": ""
+                                "instrument": "low"
+                            }
+                        }
+                    }
+                }
             },
             "operator": "and",
             "rhs": {
                 "lhs": {
-                    "lhs": null,
-                    "operator": "",
-                    "rhs": null,
-                    "tokenIndex": 0,
-                    "instrument": "close",
-                    "timeFrame": "",
-                    "params": null,
-                    "value": 0,
-                    "valueString": "",
-                    "valueTimestamp": ""
+                    "instrument": "close"
                 },
                 "operator": "\u003e",
                 "rhs": {
-                    "lhs": null,
-                    "operator": "",
-                    "rhs": null,
-                    "tokenIndex": 0,
                     "instrument": "open",
-                    "timeFrame": "",
                     "params": {
                         "offset": 1
-                    },
-                    "value": 0,
-                    "valueString": "",
-                    "valueTimestamp": ""
-                },
-                "tokenIndex": 0,
-                "instrument": "",
-                "timeFrame": "",
-                "params": null,
-                "value": 0,
-                "valueString": "",
-                "valueTimestamp": ""
-            },
-            "tokenIndex": 0,
-            "instrument": "",
-            "timeFrame": "",
-            "params": null,
-            "value": 0,
-            "valueString": "",
-            "valueTimestamp": ""
+                    }
+                }
+            }
         },
         "operator": "and",
         "rhs": {
             "lhs": {
-                "lhs": null,
-                "operator": "",
-                "rhs": null,
-                "tokenIndex": 0,
                 "instrument": "close",
-                "timeFrame": "",
                 "params": {
                     "offset": 1
-                },
-                "value": 0,
-                "valueString": "",
-                "valueTimestamp": ""
+                }
             },
             "operator": "\u003e",
             "rhs": {
-                "lhs": null,
-                "operator": "",
-                "rhs": null,
-                "tokenIndex": 0,
-                "instrument": "open",
-                "timeFrame": "",
-                "params": null,
-                "value": 0,
-                "valueString": "",
-                "valueTimestamp": ""
-            },
-            "tokenIndex": 0,
-            "instrument": "",
-            "timeFrame": "",
-            "params": null,
-            "value": 0,
-            "valueString": "",
-            "valueTimestamp": ""
-        },
-        "tokenIndex": 0,
-        "instrument": "",
-        "timeFrame": "",
-        "params": null,
-        "value": 0,
-        "valueString": "",
-        "valueTimestamp": ""
+                "instrument": "open"
+            }
+        }
     },
     "operator": "and",
     "rhs": {
         "lhs": {
             "lhs": {
-                "lhs": null,
-                "operator": "",
-                "rhs": null,
-                "tokenIndex": 0,
-                "instrument": "",
-                "timeFrame": "",
-                "params": null,
-                "value": 10,
-                "valueString": "",
-                "valueTimestamp": ""
+                "value": 10
             },
             "operator": "*",
             "rhs": {
                 "lhs": {
-                    "lhs": null,
-                    "operator": "",
-                    "rhs": null,
-                    "tokenIndex": 0,
-                    "instrument": "high",
-                    "timeFrame": "",
-                    "params": null,
-                    "value": 0,
-                    "valueString": "",
-                    "valueTimestamp": ""
+                    "instrument": "high"
                 },
                 "operator": "-",
                 "rhs": {
-                    "lhs": null,
-                    "operator": "",
-                    "rhs": null,
-                    "tokenIndex": 0,
-                    "instrument": "low",
-                    "timeFrame": "",
-                    "params": null,
-                    "value": 0,
-                    "valueString": "",
-                    "valueTimestamp": ""
-                },
-                "tokenIndex": 0,
-                "instrument": "",
-                "timeFrame": "",
-                "params": null,
-                "value": 0,
-                "valueString": "",
-                "valueTimestamp": ""
-            },
-            "tokenIndex": 0,
-            "instrument": "",
-            "timeFrame": "",
-            "params": null,
-            "value": 0,
-            "valueString": "",
-            "valueTimestamp": ""
+                    "instrument": "low"
+                }
+            }
         },
         "operator": "\u003e=",
         "rhs": {
             "lhs": {
-                "lhs": null,
-                "operator": "",
-                "rhs": null,
-                "tokenIndex": 0,
-                "instrument": "",
-                "timeFrame": "",
-                "params": null,
-                "value": 12,
-                "valueString": "",
-                "valueTimestamp": ""
+                "value": 12
             },
             "operator": "*",
             "rhs": {
                 "lhs": {
-                    "lhs": null,
-                    "operator": "",
-                    "rhs": null,
-                    "tokenIndex": 0,
                     "instrument": "ma",
-                    "timeFrame": "",
                     "params": {
                         "length": 10,
                         "smoothingLength": 1,
                         "source": "high"
-                    },
-                    "value": 0,
-                    "valueString": "",
-                    "valueTimestamp": ""
+                    }
                 },
                 "operator": "-",
                 "rhs": {
-                    "lhs": null,
-                    "operator": "",
-                    "rhs": null,
-                    "tokenIndex": 0,
                     "instrument": "ma",
-                    "timeFrame": "",
                     "params": {
                         "length": 10,
                         "smoothingLength": 1,
                         "source": "low"
-                    },
-                    "value": 0,
-                    "valueString": "",
-                    "valueTimestamp": ""
-                },
-                "tokenIndex": 0,
-                "instrument": "",
-                "timeFrame": "",
-                "params": null,
-                "value": 0,
-                "valueString": "",
-                "valueTimestamp": ""
-            },
-            "tokenIndex": 0,
-            "instrument": "",
-            "timeFrame": "",
-            "params": null,
-            "value": 0,
-            "valueString": "",
-            "valueTimestamp": ""
-        },
-        "tokenIndex": 0,
-        "instrument": "",
-        "timeFrame": "",
-        "params": null,
-        "value": 0,
-        "valueString": "",
-        "valueTimestamp": ""
-    },
-    "tokenIndex": 0,
-    "instrument": "",
-    "timeFrame": "",
-    "params": null,
-    "value": 0,
-    "valueString": "",
-    "valueTimestamp": ""
+                    }
+                }
+            }
+        }
+    }
 }

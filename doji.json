@@ -1,100 +1,27 @@
 {
     "lhs": {
         "lhs": {
-            "lhs": null,
-            "operator": "",
-            "rhs": null,
-            "tokenIndex": 0,
-            "instrument": "",
-            "timeFrame": "",
-            "params": null,
-            "value": 20,
-            "valueString": "",
-            "valueTimestamp": ""
+            "value": 20
         },
         "operator": "*",
         "rhs": {
             "lhs": {
-                "lhs": null,
-                "operator": "",
-                "rhs": null,
-                "tokenIndex": 0,
-                "instrument": "open",
-                "timeFrame": "",
-                "params": null,
-                "value": 0,
-                "valueString": "",
-                "valueTimestamp": ""
+                "instrument": "open"
             },
             "operator": "(-)",
             "rhs": {
-                "lhs": null,
-                "operator": "",
-                "rhs": null,
-                "tokenIndex": 0,
-                "instrument": "close",
-                "timeFrame": "",
-                "params": null,
-                "value": 0,
-                "valueString": "",
-                "valueTimestamp": ""
-            },
-            "tokenIndex": 0,
-            "instrument": "",
-            "timeFrame": "",
-            "params": null,
-            "value": 0,
-            "valueString": "",
-            "valueTimestamp": ""
-        },
-        "tokenIndex": 0,
-        "instrument": "",
-        "timeFrame": "",
-        "params": null,
-        "value": 0,
-        "valueString": "",
-        "valueTimestamp": ""
+                "instrument": "close"
+            }
+        }
     },
     "operator": "\u003c=",
     "rhs": {
         "lhs": {
-            "lhs": null,
-            "operator": "",
-            "rhs": null,
-            "tokenIndex": 0,
-            "instrument": "high",
-            "timeFrame": "",
-            "params": null,
-            "value": 0,
-            "valueString": "",
-            "valueTimestamp": ""
+            "instrument": "high"
         },
         "operator": "-",
         "rhs": {
-            "lhs": null,
-            "operator": "",
-            "rhs": null,
-            "tokenIndex": 0,
-            "instrument": "low",
-            "timeFrame": "",
-            "params": null,
-            "value": 0,
-            "valueString": "",
-            "valueTimestamp": ""
-        },
-        "tokenIndex": 0,
-        "instrument": "",
-        "timeFrame": "",
-        "params": null,
-        "value": 0,
-        "valueString": "",
-        "valueTimestamp": ""
-    },
-    "tokenIndex": 0,
-    "instrument": "",
-    "timeFrame": "",
-    "params": null,
-    "value": 0,
-    "valueString": "",
-    "valueTimestamp": ""
+            "instrument": "low"
+        }
+    }
 }
