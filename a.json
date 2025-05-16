@@ -1,0 +1,45 @@
+{
+    "lhs": {
+        "lhs": {
+            "lhs": {
+                "instrument": "open"
+            },
+            "operator": ">=",
+            "rhs": {
+                "value": 0
+            }
+        },
+        "operator": "or",
+        "rhs": {
+            "lhs": {
+                "instrument": "high"
+            },
+            "operator": ">=",
+            "rhs": {
+                "value": 0
+            }
+        }
+    },
+    "operator": "or",
+    "rhs": {
+        "lhs": {
+            "lhs": {
+                "instrument": "low"
+            },
+            "operator": ">=",
+            "rhs": {
+                "value": 0
+            }
+        },
+        "operator": "or",
+        "rhs": {
+            "lhs": {
+                "instrument": "close"
+            },
+            "operator": ">=",
+            "rhs": {
+                "value": 0
+            }
+        }
+    }
+}

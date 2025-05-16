@@ -41,29 +41,34 @@ func AutoGenerate() {
 	// fmt.Printf("%+v\n", variable.L)
 	// spew.Dump(variable.O)
 
-	operator := []string{"-", "+", "*", "/", "(-)", "<=", "and", ">=", "<", ">", "or"}
-	precedence := make(map[string]float32)
-	setPrecedence(precedence)
+	// operator := []string{"-", "+", "*", "/", "(-)", "<=", "and", ">=", "<", ">", "or"}
+	// precedence := make(map[string]float32)
+	// setPrecedence(precedence)
 
-	dojiFormula := node.DojiFormula
-	postfixDojiExpression := generatePostfix(dojiFormula, operator, precedence)
-	dojiObjectTree := generateObjectTree(postfixDojiExpression)
-	generateJSONFromObject(dojiObjectTree, "doji.json")
+	// dojiFormula := node.DojiFormula
+	// postfixDojiExpression := generatePostfix(dojiFormula, operator, precedence)
+	// dojiObjectTree := generateObjectTree(postfixDojiExpression)
+	// generateJSONFromObject(dojiObjectTree, "doji.json")
 
-	bullishEngulfingFormula := node.BullishEngulfing
-	postfixBullishEngulfing := generatePostfix(bullishEngulfingFormula, operator, precedence)
-	bullishEngulfingObjectTree := generateObjectTree(postfixBullishEngulfing)
-	generateJSONFromObject(bullishEngulfingObjectTree, "bullishEngulfing.json")
+	// bullishEngulfingFormula := node.BullishEngulfing
+	// postfixBullishEngulfing := generatePostfix(bullishEngulfingFormula, operator, precedence)
+	// bullishEngulfingObjectTree := generateObjectTree(postfixBullishEngulfing)
+	// generateJSONFromObject(bullishEngulfingObjectTree, "bullishEngulfing.json")
 
-	smaListFormula := node.SmaList
-	postfixSmaList := generatePostfix(smaListFormula, operator, precedence)
-	smaListObjectTree := generateObjectTree(postfixSmaList)
-	generateJSONFromObject(smaListObjectTree, "smaList.json")
+	// smaListFormula := node.SmaList
+	// postfixSmaList := generatePostfix(smaListFormula, operator, precedence)
+	// smaListObjectTree := generateObjectTree(postfixSmaList)
+	// generateJSONFromObject(smaListObjectTree, "smaList.json")
 
-	emaListFormula := node.EmaList
-	postfixEmaList := generatePostfix(emaListFormula, operator, precedence)
-	emaListObjectTree := generateObjectTree(postfixEmaList)
-	generateJSONFromObject(emaListObjectTree, "emaList.json")
+	// emaListFormula := node.EmaList
+	// postfixEmaList := generatePostfix(emaListFormula, operator, precedence)
+	// emaListObjectTree := generateObjectTree(postfixEmaList)
+	// generateJSONFromObject(emaListObjectTree, "emaList.json")
+
+	reverseProcessFromJSON("a.json")
+
+
+	// infix := generateInfix( ,operator)
 }
 
 func setPrecedence(precedence map[string]float32) {
@@ -172,4 +177,56 @@ func generateJSONFromObject(objectTree any, fileName string) {
 	if err != nil {
 		fmt.Print(err)
 	}
+}
+
+func loadObjectTreeFromJSON(fileName string) (*node.Node, error) {
+	data, err := os.ReadFile(fileName)
+	if err != nil {
+		return nil, err
+	}
+
+	var root node.Node
+	err = json.Unmarshal(data, &root)
+	if err != nil {
+		return nil, err
+	}
+
+	return &root, nil
+}
+
+func buildInfixFormulaFromTree(n *node.Node) []any {
+	if n == nil {
+		return nil
+	}
+
+	// leaf node
+	if n.Operator == "" {
+		return []any{*n}
+	}
+
+	left := buildInfixFormulaFromTree(n.Lhs)
+	right := buildInfixFormulaFromTree(n.Rhs)
+
+	return append(
+		append(
+			append([]any{"("}, left...),
+			n.Operator,
+		),
+		append(right, ")")...,
+	)
+}
+
+func reverseProcessFromJSON(fileName string) ([]any, error) {
+	root, err := loadObjectTreeFromJSON(fileName)
+	if err != nil {
+		return nil, err
+	}
+
+	infix := buildInfixFormulaFromTree(root)
+
+	// for _, x := range infix {
+
+	// }
+
+	return infix, nil
 }
